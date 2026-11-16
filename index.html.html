@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>For Taniya 💌</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Quicksand:wght@400;600;700&family=Kalam:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#d94f7a;--berry:#a8264f;--lav:#e0708f;--plum:#4a1f2e;--glass:rgba(255,255,255,.42)}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overflow:hidden}
+body{font-family:'Quicksand',sans-serif;color:var(--plum);background:linear-gradient(130deg,#ffe3ea,#fff3ea,#fff0e6,#ffd6e8)}
+.blob{position:fixed;border-radius:50%;opacity:.55;pointer-events:none;will-change:transform;animation:blob 14s ease-in-out infinite alternate}
+.b1{width:60vmax;height:60vmax;background:radial-gradient(circle,rgba(255,158,196,1) 0,rgba(255,158,196,0) 68%);top:-20vmax;left:-15vmax}
+.b2{width:55vmax;height:55vmax;background:radial-gradient(circle,rgba(255,194,207,1) 0,rgba(255,194,207,0) 68%);bottom:-22vmax;right:-14vmax;animation-delay:-5s}
+.b3{width:35vmax;height:35vmax;background:radial-gradient(circle,rgba(255,208,176,1) 0,rgba(255,208,176,0) 68%);top:35%;left:40%;animation-delay:-9s}
+@keyframes blob{to{transform:translate(8vmax,-6vmax) scale(1.2)}}
+.f{position:fixed;bottom:-10vh;left:var(--x);font-size:var(--s);opacity:0;animation:rise var(--d) linear var(--dl) infinite;pointer-events:none;z-index:1}
+@keyframes rise{0%{transform:translate(0,0) rotate(0);opacity:0}10%{opacity:.9}90%{opacity:.8}100%{transform:translate(var(--sw),-115vh) rotate(360deg);opacity:0}}
+.sp{position:fixed;pointer-events:none;z-index:70;font-size:14px;transform:translate(-50%,-50%);animation:spk .8s ease-out forwards}
+@keyframes spk{to{opacity:0;transform:translate(-50%,-160%) scale(.2) rotate(120deg)}}
+
+/* pages */
+.page{position:fixed;inset:0;z-index:2;display:flex;overflow-y:auto;padding:24px 16px 140px;opacity:0;visibility:hidden;transform:scale(.95) translateY(12px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,.8,.25,1),visibility .8s}
+.page.active{opacity:1;visibility:visible;transform:none}
+.inner{margin:auto;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
+.script{font-family:'Great Vibes',cursive;font-weight:400}
+.glass{background:var(--glass);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.75);border-radius:28px;box-shadow:0 20px 50px rgba(176,42,107,.18),inset 0 1px 0 #fff}
+.shine{background:linear-gradient(90deg,#e8467f,#e0708f,#f4a57d,#e8467f);background-size:100% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+@keyframes shine{to{background-position:300% 0}}
+@keyframes in{to{opacity:1;transform:none}}
+
+/* 1 welcome */
+.halo{position:absolute;width:min(85vw,400px);aspect-ratio:1;border-radius:50%;background:conic-gradient(#ff9ec4,#ffc2cf,#ffd0b0,#ff9ec4);filter:blur(45px);opacity:.55;animation:spin 10s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.kicker{position:relative;font:italic 500 1.25rem 'Cormorant Garamond',serif;opacity:0;animation:in 1s forwards .1s}
+.name{position:relative;white-space:nowrap;font-size:clamp(3rem,17vw,7rem);line-height:1.05;margin:.1em 0 0}
+.name span{display:inline-block;background:linear-gradient(90deg,#e8467f,#e0708f,#f4a57d,#e8467f);background-size:100% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:drop .9s cubic-bezier(.2,1.5,.4,1) var(--d) backwards}
+@keyframes drop{from{opacity:0;transform:translateY(-60px) rotate(-18deg) scale(.4)}}
+.hb{position:relative;font-size:clamp(2.6rem,12vw,4.4rem);color:var(--berry);opacity:0;animation:in 1.2s forwards 1.5s;transform:translateY(14px)}
+.obtn{position:relative;margin-top:2rem;padding:1rem 2.8rem;border:0;border-radius:99px;font:700 1.3rem 'Quicksand',sans-serif;color:#fff;background:linear-gradient(135deg,#ff5f9b,#e0708f);box-shadow:0 12px 32px rgba(232,70,127,.5);cursor:pointer;opacity:0;animation:in .8s forwards 2.2s,pulse 1.6s ease-in-out 3s infinite}
+.obtn::before{content:'';position:absolute;inset:-6px;border-radius:inherit;border:2px solid #ff5f9b;animation:ring 1.6s ease-out 3s infinite}
+@keyframes pulse{50%{transform:scale(1.07)}}
+@keyframes ring{from{transform:scale(1);opacity:.9}to{transform:scale(1.3,1.5);opacity:0}}
+.hint{position:relative;margin-top:1rem;font-size:.9rem;opacity:0;animation:in 1s forwards 2.8s}
+
+/* 2 letter */
+.stage{display:grid;place-items:center;width:min(92vw,480px);margin:auto;justify-items:center;align-content:center}.stage>*{grid-area:1/1}.stage>div:first-child{width:100%;display:flex;flex-direction:column;align-items:center}.gift{margin-inline:auto;left:0;right:0}
+.env{width:min(78vw,300px);aspect-ratio:1.4;position:relative;transition:opacity .9s,transform .9s;will-change:opacity,transform}
+.env .bk{position:absolute;inset:0;background:#f7b0cb;border-radius:10px;box-shadow:0 18px 26px rgba(176,42,107,.3)}
+.env .fl{position:absolute;top:0;left:0;right:0;height:56%;background:#ee86ae;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transform:perspective(600px) rotateX(0);transition:transform .9s cubic-bezier(.4,0,.2,1),z-index 0s .45s;z-index:3}
+.env.open .fl{transform:perspective(600px) rotateX(180deg);z-index:1}
+.env .fr{position:absolute;inset:0;background:#ffc6db;clip-path:polygon(0 100%,0 0,50% 56%,100% 0,100% 100%);z-index:2;border-radius:10px}
+.env .seal{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:4;font-size:2rem;transition:.5s;animation:beat 1.2s infinite}
+.env.open .seal{opacity:0}
+@keyframes beat{50%{transform:translate(-50%,-50%) scale(1.25)}}
+.env.gone{opacity:0;transform:scale(.7) translateY(60px);pointer-events:none}
+.letter{width:min(92vw,460px);padding:1.8rem 1.5rem;text-align:left;opacity:0;transform:translateY(40px) scale(.9);transition:opacity 1s,transform 1s;background:linear-gradient(#fffafb,#fff1f6);border-radius:22px;box-shadow:0 22px 55px rgba(176,42,107,.25);border:1px solid #fff}
+.letter.show{opacity:1;transform:none}
+.letter h3{font-size:2.5rem;color:var(--berry);margin-bottom:.3rem}
+.letter p{font:700 1.28rem/1.55 'Dancing Script',cursive;margin-bottom:.7rem;opacity:0;transform:translateY(10px)}
+.letter.show p{animation:in .8s forwards calc(var(--i)*.75s + .5s)}
+.letter .sig{text-align:right;font-size:1.6rem;color:var(--berry)}
+
+/* 3 gallery */
+.title{font-size:clamp(3rem,13vw,4.4rem);line-height:1.1}
+.sub{font:italic 500 1.15rem 'Cormorant Garamond',serif;margin-bottom:1.2rem}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:18px 16px;width:min(92vw,480px)}
+.pol{background:#fff;padding:8px 8px 10px;border-radius:6px;box-shadow:0 14px 30px rgba(67,25,74,.25);transform:rotate(var(--r));transition:transform .4s;cursor:pointer}
+.pol:hover,.pol:active{transform:rotate(0) scale(1.05);z-index:3}
+.page.active .pol{animation:pop .9s cubic-bezier(.2,1.5,.4,1) calc(var(--i)*.18s + .3s) backwards}
+@keyframes pop{from{opacity:0;transform:translateY(70px) rotate(0) scale(.5)}}
+.pol.big{grid-column:1/-1}
+.ph{aspect-ratio:1;position:relative;overflow:hidden;border-radius:3px;background:linear-gradient(135deg,#ffc2d9,#ffd9e2);display:grid;place-items:center;font-size:2.2rem}
+.pol.big .ph{aspect-ratio:5/4}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.cap{font:700 1.1rem 'Dancing Script',cursive;margin-top:7px;color:var(--berry)}
+#lb{position:fixed;inset:0;z-index:50;background:rgba(40,10,45,.82);backdrop-filter:blur(6px);display:none;place-items:center}
+#lb.on{display:grid}
+#lb img{max-width:92vw;max-height:80vh;border:8px solid #fff;border-radius:12px;box-shadow:0 20px 60px #0008}
+
+/* 4 bouquet */
+#bq{width:min(88vw,370px);filter:drop-shadow(0 16px 20px rgba(176,42,107,.25));cursor:pointer}
+.sway{transform-box:fill-box;transform-origin:50% 100%;animation:sway 5s ease-in-out infinite alternate}
+@keyframes sway{from{transform:rotate(-1.6deg)}to{transform:rotate(1.6deg)}}
+.stem{stroke-dasharray:420;stroke-dashoffset:420}
+.page.active .stem{animation:draw 1.5s ease forwards calc(var(--i)*.08s)}
+@keyframes draw{to{stroke-dashoffset:0}}
+.bloom{transform-box:fill-box;transform-origin:center;transform:scale(0)}
+.page.active .bloom{animation:bloom 1.1s cubic-bezier(.2,1.6,.4,1) forwards calc(.9s + var(--i)*.16s)}
+@keyframes bloom{to{transform:scale(1)}}
+.bow{opacity:0}.page.active .bow{animation:in 1s forwards 3.2s}
+.line{font:700 1.4rem 'Dancing Script',cursive;color:var(--berry);margin-top:.4rem;max-width:88vw}
+
+/* 5 gift */
+.gift{width:170px;height:160px;position:relative;cursor:pointer;animation:wob 1.8s ease-in-out infinite;transition:opacity .6s,transform .6s}
+@keyframes wob{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg) translateY(-6px)}}
+.box{position:absolute;bottom:0;left:12px;right:12px;height:108px;background:linear-gradient(#ff7fae,#e8467f);border-radius:0 0 14px 14px;box-shadow:0 16px 26px rgba(176,42,107,.35)}
+.box::after,.lid::after{content:'';position:absolute;left:50%;top:0;bottom:0;width:26px;margin-left:-13px;background:#ffe3a8}
+.lid{position:absolute;top:0;left:0;right:0;height:56px;background:linear-gradient(#ff9bc0,#f2528f);border-radius:12px;z-index:2;transition:transform 1s cubic-bezier(.3,1.4,.5,1),opacity 1s}
+.bw{position:absolute;top:-30px;left:50%;transform:translateX(-50%);font-size:2.8rem;z-index:3}
+.gift.open{animation:none}
+.gift.open .lid{transform:translateY(-170px) rotate(-24deg);opacity:0}
+.gift.gone{opacity:0;transform:scale(.5);pointer-events:none}
+.tap{margin-top:1.4rem;font:700 1.15rem 'Quicksand',sans-serif;animation:pulse 1.4s infinite;transition:opacity .4s}
+.tap.gone{opacity:0}
+.gcard{width:min(92vw,440px);padding:1.8rem 1.4rem;opacity:0;transform:scale(.8) translateY(30px);transition:opacity 1s,transform 1s;pointer-events:none}
+.gcard.show{opacity:1;transform:none;pointer-events:auto}
+.gcard h2{font-size:clamp(2.6rem,12vw,3.6rem);line-height:1.1;margin-bottom:.6rem}
+.sing p{font:500 1.35rem/1.5 'Cormorant Garamond',serif;font-style:italic;opacity:.35}
+.gcard.show .sing p{animation:kara 1.5s forwards calc(var(--i)*1.5s + 1s)}
+@keyframes kara{30%,100%{opacity:1;color:var(--berry);transform:scale(1.07)}}
+.love{margin-top:1.1rem;font:700 1.3rem/1.5 'Dancing Script',cursive}
+.pair{margin-top:.8rem;font-size:2.4rem}
+#wm{position:fixed;left:0;right:0;bottom:calc(env(safe-area-inset-bottom) + 8px);z-index:25;text-align:center;font-size:.78rem;font-weight:600;line-height:1.5;opacity:0;pointer-events:none;transition:opacity 1s}
+#wm.on{opacity:.9}#wm b{color:var(--berry)}
+
+/* nav */
+#nav{position:fixed;left:0;right:0;bottom:calc(env(safe-area-inset-bottom) + 38px);display:flex;justify-content:center;align-items:center;gap:14px;z-index:20;transition:opacity .5s,transform .5s}
+#nav.hide{opacity:0;pointer-events:none;transform:translateY(20px)}
+#nav button,#mute{width:44px;height:44px;border-radius:50%;border:1px solid #fff;background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:1.15rem;color:var(--berry);cursor:pointer;box-shadow:0 8px 20px rgba(176,42,107,.2)}
+#dots{display:flex;gap:8px}#dots i{width:8px;height:8px;border-radius:9px;background:#fff;opacity:.7;transition:.4s}#dots i.on{width:24px;background:var(--rose);opacity:1}
+#mute{position:fixed;top:14px;right:14px;z-index:30;display:none}
+body.music #mute{display:block}
+#cf{position:fixed;inset:0;z-index:60;pointer-events:none}
+@media (prefers-reduced-motion:reduce){.f,.blob,.halo,.sway{animation:none}}
+
+/* romantic upgrade */
+.pt{position:fixed;top:-6vh;left:var(--x);width:var(--sz);height:calc(var(--sz)*1.35);background:radial-gradient(at 30% 30%,#ffb3c6,#e04a70);border-radius:100% 0 100% 0;opacity:.85;pointer-events:none;z-index:1;animation:fall var(--d) linear var(--dl) infinite}
+@keyframes fall{to{transform:translate(var(--sw),112vh) rotate(540deg)}}
+#dim{position:fixed;inset:0;z-index:1;opacity:0;transition:opacity 2.5s;background:radial-gradient(circle at 50% 40%,#6b1838,#1f0712 75%)}
+body.night #dim{opacity:1}body.night #wm{color:#ffd9e2}
+.msgs{display:flex;flex-direction:column;gap:24px;width:min(92vw,440px)}
+.msg{position:relative;padding:1.5rem 1.3rem;text-align:left;background:linear-gradient(#fffdf9,#fff1f3);border-radius:14px;box-shadow:0 14px 32px rgba(168,38,79,.2);transform:translateY(44px) rotate(var(--r));opacity:0;transition:opacity 1s,transform 1s}
+.msg.in{opacity:1;transform:rotate(var(--r))}
+.msg p,.ty,.letter p,.nl{font:400 1.12rem/1.75 'Kalam','Quicksand',sans-serif}
+.tape{position:absolute;top:-10px;left:50%;width:70px;height:20px;margin-left:-35px;background:rgba(255,190,205,.75);transform:rotate(-3deg)}
+.ltr{width:min(92vw,440px);padding:1.8rem 1.4rem;text-align:left}
+.ty{white-space:pre-line;min-height:11em}
+.typing::after{content:'|';animation:blink .7s infinite}@keyframes blink{50%{opacity:0}}
+.nl{min-height:2.8em;text-align:center}
+.fn{position:absolute;bottom:4px;font:600 .62rem 'Quicksand';opacity:.7}
+.ph{font-size:2rem}.g2 .ph{aspect-ratio:4/5}
+.arena{position:relative;width:min(92vw,420px);height:44vh}
+.hh{position:absolute;left:var(--x);top:var(--y);font-size:2.8rem;background:none;border:0;cursor:pointer;filter:drop-shadow(0 0 10px #ff6b95);animation:drift var(--t) ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(var(--dx),var(--dy))}}
+.hh.got{animation:gotit .6s forwards;pointer-events:none}@keyframes gotit{to{transform:scale(2.2);opacity:0}}
+.sec{display:none;width:min(92vw,420px);padding:1.8rem 1.4rem;opacity:0;transform:translateY(20px)}.sec.show{display:block;animation:in 1s forwards}
+.sec p{font:700 1.5rem/1.4 'Dancing Script',cursive;color:var(--berry)}
+#etap{margin-top:1.2rem}.env{cursor:pointer}
+#p10{color:#ffe9ef}
+#fs{position:absolute;left:50%;top:46%;width:88vw;max-width:480px;transform:translate(-50%,-50%);font-size:clamp(2rem,9vw,3rem);line-height:1.3;opacity:0;transition:opacity 1s;pointer-events:none}#fs.on{opacity:1}
+#fq{opacity:0;pointer-events:none;transition:opacity 1.6s;display:flex;flex-direction:column;align-items:center}#fq.on{opacity:1;pointer-events:auto}
+@keyframes hb2{0%,100%{transform:scale(1)}15%{transform:scale(1.18)}30%{transform:scale(1)}45%{transform:scale(1.12)}}
+#hrt{width:110px;fill:#ff4d79;filter:drop-shadow(0 0 22px #ff4d79);animation:hb2 1.4s infinite}
+.q{font:700 1.6rem/1.35 'Cormorant Garamond',serif;max-width:88vw;margin:1rem 0 1.4rem}
+.ch{display:flex;flex-direction:column;gap:12px}
+.ch button{padding:.95rem 1.8rem;border-radius:99px;font:700 1.1rem 'Quicksand',sans-serif;cursor:pointer;border:1px solid #ffc2d1;color:#fff;background:linear-gradient(135deg,#ff5f9b,#e0708f);box-shadow:0 10px 28px rgba(255,77,121,.45)}
+.ch button+button{background:rgba(255,255,255,.12);box-shadow:none}
+.res{display:none;width:min(92vw,440px);padding:1.8rem 1.4rem;opacity:0;background:rgba(255,255,255,.12);border-radius:28px;border:1px solid rgba(255,255,255,.3)}
+.res.show{display:block;animation:in 1.2s forwards}
+.res h2{font-size:2.8rem;margin-bottom:.5rem}.res p{font:500 1.35rem/1.55 'Cormorant Garamond',serif}
+@media (prefers-reduced-motion:reduce){.pt{animation:none}}
+
+/* v2: smoothness + secret letter fix */
+button{touch-action:manipulation}
+.page{overflow-x:hidden}.page:not(.active){pointer-events:none}
+.page:not(.active) *{animation-play-state:paused}
+.f,.pt,.hh{will-change:transform,opacity}
+.halo{filter:none;-webkit-mask-image:radial-gradient(circle,#000 25%,transparent 68%);mask-image:radial-gradient(circle,#000 25%,transparent 68%);will-change:transform}
+.sway{animation:none}#bq{transform-origin:50% 100%;animation:sway 5s ease-in-out infinite alternate}
+.letter{pointer-events:none;transform-origin:50% 0;transform:perspective(900px) rotateX(-55deg) translateY(30px);transition:opacity .9s ease,transform 1.2s cubic-bezier(.2,.8,.2,1);padding:1.8rem 1.4rem 1.6rem 2.8rem;border-radius:6px;border:1px solid #f3dfd6;box-shadow:0 22px 50px rgba(168,38,79,.25);background:linear-gradient(90deg,transparent 2.1rem,rgba(224,112,143,.3) 2.1rem 2.15rem,transparent 2.15rem),linear-gradient(#fffdf8,#fff3ee)}
+.letter.show{pointer-events:auto}
+.letter p{font:400 1.08rem/1.8 'Kalam','Quicksand',sans-serif;margin-bottom:.9rem}
+.letter.show p{animation:in .9s ease forwards calc(var(--i)*1s + .6s)}
+.letter h3{margin-bottom:.6rem}
+#fs{transform:translate(-50%,-46%);transition:opacity 1.1s ease,transform 1.1s ease}#fs.on{opacity:1;transform:translate(-50%,-50%)}
+/* envelope fix: the hidden letter used to stretch the grid and push the envelope under the nav bar */
+.letter{display:none}.letter.pre,.letter.show{display:block}
+#nav{pointer-events:none}#nav>*{pointer-events:auto}
+
+/* v3: password gate, diary, watermark */
+#mk{position:fixed;right:14px;bottom:calc(env(safe-area-inset-bottom) + 8px);z-index:26;font:500 .95rem 'Dancing Script',cursive;color:var(--berry);opacity:.6;pointer-events:none;user-select:none;-webkit-user-select:none;transition:color .8s}
+body.night #mk{color:#ffd9e2}
+#wm{right:auto;left:14px;text-align:left}
+.gwrap{position:relative;display:flex;justify-content:center}
+.page.active .gwrap{animation:gin 1.1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes gin{from{opacity:0;transform:translateY(34px) scale(.95)}}
+.gate{position:relative;width:min(92vw,400px);padding:2rem 1.5rem 1.6rem;display:flex;flex-direction:column;align-items:center;gap:.85rem;text-align:center;box-shadow:0 20px 60px rgba(224,112,143,.35),inset 0 1px 0 #fff}
+.gate::before{content:'';position:absolute;inset:-18px;border-radius:44px;background:radial-gradient(closest-side,rgba(255,140,175,.45),transparent);opacity:.7;z-index:-1;pointer-events:none;animation:glow 3.4s ease-in-out infinite alternate}
+@keyframes glow{to{opacity:1;transform:scale(1.05)}}
+.gate.shake{animation:shake .5s}
+@keyframes shake{20%,60%{transform:translateX(-9px)}40%,80%{transform:translateX(9px)}}
+.glock{font-size:2.1rem;line-height:1}.gate.ok .glock{animation:unl .9s ease both}
+@keyframes unl{30%{transform:scale(1.5) rotate(-14deg)}100%{transform:scale(1.15)}}
+.gate h1{font-size:clamp(2.3rem,10vw,3rem);line-height:1.15}
+.gsub{font:italic 500 1.2rem/1.35 'Cormorant Garamond',serif}
+.ghint{font:600 .9rem/1.4 'Quicksand',sans-serif;opacity:.85}
+.gate form,.gate .row{width:100%;display:flex;flex-direction:column;align-items:center;gap:.85rem}
+#gin{width:100%;max-width:260px;padding:.85rem 1rem;border-radius:99px;border:1.5px solid rgba(224,112,143,.5);background:rgba(255,255,255,.75);text-align:center;font:700 1.35rem 'Quicksand',sans-serif;letter-spacing:.28em;color:var(--plum);outline:none}
+#gin::placeholder{letter-spacing:.12em;font-size:1rem;opacity:.5}
+#gin:focus{border-color:var(--rose);box-shadow:0 0 0 4px rgba(224,112,143,.2)}
+.gmsg{min-height:1.6em;font:600 .98rem 'Quicksand',sans-serif;color:var(--berry)}.gmsg.good{font-size:1.15rem}
+.gd{position:absolute;width:12px;height:12px;border-radius:50%;background:radial-gradient(circle,#fff,rgba(255,200,220,0) 70%);pointer-events:none;animation:bob 4s ease-in-out infinite alternate}
+.dbtn{padding:.85rem 1.6rem;border:0;border-radius:99px;background:#fff;color:var(--berry);font:700 1.05rem 'Quicksand',sans-serif;box-shadow:0 10px 24px rgba(120,20,60,.28);cursor:pointer}
+.gate .dbtn{background:linear-gradient(135deg,#ff5f9b,#e0708f);color:#fff}
+/* diary */
+.diary{position:relative;display:grid;width:min(88vw,340px);perspective:1200px}
+.diary>*{grid-area:1/1}
+.diary::before{content:'';grid-area:1/1;margin:-30px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,160,190,.5),transparent);opacity:.6;pointer-events:none;animation:glow 3.4s ease-in-out infinite alternate}
+.cover{position:relative;min-height:430px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;padding:2rem 1.6rem 2rem 2.3rem;text-align:center;color:#fff8f0;border-radius:6px 18px 18px 6px;transform-origin:left center;backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:transform 1.1s cubic-bezier(.5,.05,.2,1);background:radial-gradient(rgba(255,255,255,.14) 1px,transparent 1.3px) 0 0/8px 8px,linear-gradient(135deg,#f6c1c8,#e9a0b0 50%,#d98aa0);box-shadow:inset 14px 0 0 -2px rgba(168,38,79,.35),0 24px 50px rgba(168,38,79,.3)}
+.cover::before{content:'';position:absolute;inset:14px 14px 14px 26px;border:1.5px solid rgba(255,238,214,.75);border-radius:4px;pointer-events:none}
+.cover::after{content:'';position:absolute;right:28px;bottom:-14px;width:16px;height:46px;background:#c0395f;clip-path:polygon(0 0,100% 0,100% 100%,50% 78%,0 100%)}
+.cover h2{font-size:clamp(2.2rem,10vw,2.7rem);line-height:1.1;text-shadow:0 2px 10px rgba(168,38,79,.4)}
+.csub{font:italic 500 1.2rem/1.35 'Cormorant Garamond',serif}
+.cover .dbtn{animation:pulse 2.2s ease-in-out infinite}
+.pf{position:absolute;font-style:normal;font-size:1.3rem;opacity:.85;pointer-events:none;animation:bob 4s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(-6px) rotate(8deg)}}
+.fz{position:absolute;font-style:normal;font-size:1rem;opacity:.8;pointer-events:none;animation:bob 5s ease-in-out infinite alternate}
+.diary.opened .cover{transform:rotateY(-165deg);pointer-events:none}
+.diary.rst .cover,.diary.rst .book{transition:none}
+.book{display:flex;flex-direction:column;align-items:center;gap:16px;opacity:0;visibility:hidden;transition:opacity .6s .5s,visibility 0s .5s}
+.diary.opened .book{opacity:1;visibility:visible}
+.pages{position:relative;width:100%;display:grid;min-height:400px}
+.sheet{grid-area:1/1;position:relative;padding:32px 1.2rem 32px 2.4rem;border-radius:4px 14px 14px 4px;transform-origin:left center;transform:perspective(1100px) rotateY(0) rotate(var(--r,0deg));transition:transform .7s cubic-bezier(.45,.05,.3,1);backface-visibility:hidden;-webkit-backface-visibility:hidden;text-align:left;box-shadow:0 14px 34px rgba(168,38,79,.22);background:radial-gradient(rgba(190,120,120,.1) 1px,transparent 1.3px) 0 0/8px 8px,linear-gradient(90deg,transparent 1.9rem,rgba(224,112,143,.35) 1.9rem calc(1.9rem + 1px),transparent calc(1.9rem + 1px)),repeating-linear-gradient(transparent 0 31px,rgba(224,112,143,.22) 31px 32px),var(--tint,#fffaf4)}
+.sheet.flip{transform:perspective(1100px) rotateY(-105deg) rotate(var(--r,0deg))}
+.sheet::after{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(90deg,rgba(120,30,60,.22),transparent 70%);opacity:0;transition:opacity .7s;pointer-events:none}
+.sheet.flip::after{opacity:1}
+.sheet h3{font:400 1.6rem/32px 'Great Vibes',cursive;height:64px;display:flex;align-items:center;color:var(--berry)}
+.sheet .hw{font:400 1.1rem/32px 'Kalam','Quicksand',sans-serif;color:#5b2a3c;min-height:288px}
+.sheet .tape{background:var(--tape,rgba(255,190,205,.8))}
+.deco{position:absolute;font-style:normal;font-size:1.6rem;opacity:.9;pointer-events:none}
+.dctl{display:flex;align-items:center;gap:14px;min-height:44px}
+.dctl button:not(.dbtn){width:44px;height:44px;border-radius:50%;border:1px solid #fff;background:var(--glass);font-size:1.2rem;color:var(--berry);cursor:pointer;box-shadow:0 8px 20px rgba(176,42,107,.2)}
+.dctl button:disabled{opacity:.35;cursor:default}
+#dCount{font:italic 600 1.15rem 'Cormorant Garamond',serif;min-width:3.6rem;text-align:center}
+#dCont{display:none;align-items:center}
+@media (prefers-reduced-motion:reduce){.cover,.sheet,.book,.sheet::after{transition:none}.pf,.fz,.gd,.diary::before,.gate::before,.cover .dbtn{animation:none}.page.active .gwrap{animation:none}}
+
+/* v4: reel page */
+.title.sm{font-size:clamp(2.3rem,10vw,3.2rem)}
+.reel{position:relative;aspect-ratio:9/16;width:max(200px,min(72vw,320px,calc((100svh - 380px)*.5625)));padding:0;border-radius:26px;background:linear-gradient(135deg,#f7c9c0,#e0708f 50%,#f3d3b8);box-shadow:0 18px 44px rgba(168,38,79,.3)}
+.reel::before{content:'';position:absolute;inset:-26px;border-radius:50px;background:radial-gradient(closest-side,rgba(255,140,175,.5),transparent);opacity:.65;z-index:-1;pointer-events:none;animation:glow 3.4s ease-in-out infinite alternate}
+.rv{position:absolute;inset:3px;border-radius:23px;overflow:hidden;background:radial-gradient(circle at 50% 40%,#5a2336,#24101a)}
+.rv video{display:block;width:100%;height:100%;object-fit:contain;background:transparent}
+.rplay{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;border:1.5px solid rgba(255,255,255,.8);background:rgba(255,95,155,.78);color:#fff;font-size:1.9rem;padding-left:5px;cursor:pointer;box-shadow:0 0 0 0 rgba(255,95,155,.55),0 10px 30px rgba(0,0,0,.35);animation:rpulse 1.9s ease-out infinite;transition:opacity .4s,transform .4s}
+@keyframes rpulse{to{box-shadow:0 0 0 22px rgba(255,95,155,0),0 10px 30px rgba(0,0,0,.35)}}
+.rplay.gone{opacity:0;transform:scale(.7);pointer-events:none}
+.rctl{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;gap:8px;padding:26px 10px 9px;background:linear-gradient(transparent,rgba(30,8,20,.7));opacity:0;pointer-events:none;transition:opacity .5s}
+.reel.started .rctl{opacity:1;pointer-events:auto}
+.rctl button{flex:none;width:36px;height:36px;border:0;border-radius:50%;background:rgba(255,255,255,.2);color:#fff;font-size:1rem;cursor:pointer}
+.rctl input{flex:1;min-width:0;height:36px;accent-color:#ff7fae;touch-action:manipulation}
+.rmiss{position:absolute;inset:0;display:grid;place-items:center;padding:1.2rem;text-align:center;color:#ffe9ef;font:italic 500 1.2rem/1.4 'Cormorant Garamond',serif}
+.rmiss[hidden]{display:none}
+.rend{margin-top:1.1rem;min-height:2.4em;max-width:88vw;font:700 1.35rem/1.4 'Dancing Script',cursive;color:var(--berry);opacity:0;transform:translateY(12px);transition:opacity 1.2s ease,transform 1.2s ease}
+.rend.on{opacity:1;transform:none;animation:rfloat 3.6s ease-in-out 1.2s infinite alternate}
+@keyframes rfloat{to{transform:translateY(-4px)}}
+.reel:fullscreen{width:100vw;height:100vh;aspect-ratio:auto;border-radius:0;background:#000;box-shadow:none}
+.reel:-webkit-full-screen{width:100vw;height:100vh;aspect-ratio:auto;border-radius:0;background:#000;box-shadow:none}
+.reel:fullscreen .rv,.reel:-webkit-full-screen .rv{inset:0;border-radius:0}
+.reel:fullscreen::before{display:none}
+@media (prefers-reduced-motion:reduce){.reel::before,.rplay,.rend.on{animation:none}}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div id="dim"></div><div id="fl"></div>
+<audio id="bgm" src="song.mp3" loop preload="auto"></audio>
+<button id="mute" aria-label="Toggle music">🔊</button>
+
+<!-- 0 password gate -->
+<section class="page active" id="p0"><div class="inner">
+  <span class="gd" style="left:-6%;top:6%"></span><span class="gd" style="right:-4%;top:18%;animation-delay:-1s"></span><span class="gd" style="left:8%;bottom:-4%;animation-delay:-2s"></span><span class="gd" style="right:10%;bottom:2%;animation-delay:-3s"></span>
+  <div class="gwrap"><div class="gate glass" id="gate">
+    <div class="glock" id="glock">🔒</div>
+    <h1 class="script shine">A Little Secret Awaits You, Taniya 💗</h1>
+    <p class="gsub">Before entering, prove that you know this little secret…</p>
+    <p class="ghint">A little nickname, a little bond, and a special place in someone's heart. 💗</p>
+    <form id="gform" autocomplete="off" novalidate>
+      <input id="gin" type="text" maxlength="50" placeholder="Enter the little secret…" aria-label="Enter the password" autocomplete="off" autocapitalize="off" spellcheck="false">
+      <button class="dbtn" id="gbtn" type="submit">Unlock 💗</button>
+    </form>
+    <p class="gmsg" id="gmsg" aria-live="polite"></p>
+  </div></div>
+</div></section>
+
+<!-- 1 -->
+<section class="page" id="p1"><div class="inner">
+  <div class="halo"></div>
+  <p class="kicker">Something I've been wanting to tell you ✨</p>
+  <h1 class="name script" id="nm" aria-label="Taniya"></h1>
+  <h2 class="hb script">This one is for you</h2>
+  <button class="obtn" id="openBtn">Open 💌</button>
+  <p class="hint">Tap to begin, best with sound on 🎧</p>
+</div></section>
+
+<!-- 2 diary -->
+<section class="page" id="p2"><div class="inner">
+  <i class="fz" style="left:-8px;top:8%">🌸</i><i class="fz" style="right:-8px;top:30%;animation-delay:-1.5s">💗</i><i class="fz" style="left:-6px;bottom:22%;animation-delay:-3s">🌷</i><i class="fz" style="right:-6px;bottom:6%;animation-delay:-2s">✨</i>
+  <div class="diary" id="diary">
+    <div class="cover" id="cover">
+      <i class="pf" style="top:24px;right:28px">🌸</i><i class="pf" style="bottom:32px;left:38px;animation-delay:-2s">🌷</i><i class="pf" style="top:30px;left:42px;font-size:.95rem;animation-delay:-1s">💗</i>
+      <h2 class="script">Little Things I Never Told You 💗</h2>
+      <p class="csub">Some feelings are easier to write than to say...</p>
+      <button class="dbtn" id="dOpen">Open My Little Diary 💗</button>
+    </div>
+    <div class="book" id="book">
+      <div class="pages"><div class="sheet" id="sUnder"><span class="tape"></span><h3 class="script"></h3><p class="hw"></p><i class="deco"></i></div><div class="sheet" id="sTop"><span class="tape"></span><h3 class="script"></h3><p class="hw"></p><i class="deco"></i></div></div>
+      <div class="dctl"><button id="dPrev" aria-label="Previous note">‹</button><span id="dCount">1 of 5</span><button id="dNext" aria-label="Next note">›</button><button class="dbtn" id="dCont">Continue 💗</button></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 3 gaming gallery -->
+<section class="page" id="p3"><div class="inner">
+  <h2 class="title script shine">Gaming Memories 🎮</h2>
+  <p class="sub">Our Free Fire moments</p>
+  <div class="gal"><div class="pol" style="--r:-2deg;--i:0"><div class="ph">🎮<span class="fn">game1.jpg</span><img src="game1.jpg" alt="" onerror="this.style.display='none'"></div><p class="cap">Gaming memory 1 🎮</p></div><div class="pol" style="--r:3deg;--i:1"><div class="ph">🎮<span class="fn">game2.jpg</span><img src="game2.jpg" alt="" onerror="this.style.display='none'"></div><p class="cap">Gaming memory 2 🎮</p></div><div class="pol" style="--r:-3deg;--i:2"><div class="ph">🎮<span class="fn">game3.jpg</span><img src="game3.jpg" alt="" onerror="this.style.display='none'"></div><p class="cap">Gaming memory 3 🎮</p></div><div class="pol" style="--r:2deg;--i:3"><div class="ph">🎮<span class="fn">game4.jpg</span><img src="game4.jpg" alt="" onerror="this.style.display='none'"></div><p class="cap">Gaming memory 4 🎮</p></div><div class="pol" style="--r:3deg;--i:4"><div class="ph">🎮<span class="fn">game5.jpg</span><img src="game5.jpg" alt="" onerror="this.style.display='none'"></div><p class="cap">Gaming memory 5 🎮</p></div><div class="pol" style="--r:-2deg;--i:5"><div class="ph">🎮<span class="fn">game6.jpg</span><img src="game6.jpg" alt="" onerror="this.style.display='none'"></div><p class="cap">Gaming memory 6 🎮</p></div></div>
+</div></section>
+
+<!-- 4 Taniya gallery -->
+<section class="page" id="p4"><div class="inner">
+  <h2 class="title script shine">Taniya's Gallery 💗</h2>
+  <p class="sub">My favourite smile</p>
+  <div class="gal g2"><div class="pol" style="--r:-2deg;--i:0"><div class="ph">🌸<span class="fn">taniya1.jpg</span><img src="taniya1.jpg" alt="" onerror="this.style.display='none'"></div><p class="cap">Moti 💗</p></div><div class="pol" style="--r:3deg;--i:1"><div class="ph">🌸<span class="fn">taniya2.jpg</span><img src="taniya2.jpg" alt="" onerror="this.style.display='none'"></div><p class="cap">Moti ✨</p></div><div class="pol" style="--r:-3deg;--i:2"><div class="ph">🌸<span class="fn">taniya3.jpg</span><img src="taniya3.jpg" alt="" onerror="this.style.display='none'"></div><p class="cap">Moti 🌸</p></div><div class="pol" style="--r:2deg;--i:3"><div class="ph">🌸<span class="fn">taniya4.jpg</span><img src="taniya4.jpg" alt="" onerror="this.style.display='none'"></div><p class="cap">Moti 🩷</p></div><div class="pol" style="--r:3deg;--i:4"><div class="ph">🌸<span class="fn">taniya5.jpg</span><img src="taniya5.jpg" alt="" onerror="this.style.display='none'"></div><p class="cap">Moti 💖</p></div><div class="pol" style="--r:-2deg;--i:5"><div class="ph">🌸<span class="fn">taniya6.jpg</span><img src="taniya6.jpg" alt="" onerror="this.style.display='none'"></div><p class="cap">Moti 🌷</p></div></div>
+</div></section>
+<div id="lb"><img id="lbi" alt=""></div>
+
+<!-- 4b reel -->
+<section class="page" id="pv"><div class="inner">
+  <h2 class="title sm script shine">A Little Reel of You 💗</h2>
+  <p class="sub">Some moments are just too beautiful to be captured in a photo...</p>
+  <div class="reel" id="reel"><div class="rv">
+    <video id="rvid" src="taniya-reel.mp4#t=0.001" playsinline webkit-playsinline preload="metadata"></video>
+    <button class="rplay" id="rplay" aria-label="Play video">▶</button>
+    <div class="rctl"><button id="rpp" aria-label="Play or pause">▶</button><button id="rvol" aria-label="Mute or unmute">🔊</button><input id="rrng" type="range" min="0" max="1" step=".05" value="1" aria-label="Volume"><button id="rfs" aria-label="Fullscreen">⤢</button></div>
+    <p class="rmiss" id="rmiss" hidden>Taniya's reel will appear here 💗</p>
+  </div></div>
+  <p class="rend" id="rend">Just a little moment worth remembering. 🥹❤️</p>
+</div></section>
+
+<!-- 5 hidden feelings -->
+<section class="page" id="p5"><div class="inner">
+  <h2 class="title script shine">Something More…</h2>
+  <p class="sub">Words I kept inside</p>
+  <div class="glass ltr"><p class="ty" id="t6"></p></div>
+</div></section>
+
+<!-- 6 things I never said (gift) -->
+<section class="page" id="p6"><div class="inner stage">
+  <div style="text-align:center">
+    <h2 class="title script shine" style="margin-bottom:1.5rem">Things I Never Said</h2>
+    <div class="gift" id="gift"><div class="lid"><span class="bw">🎀</span></div><div class="box"></div></div>
+    <p class="tap" id="tap">Tap to open 💝</p>
+  </div>
+  <div class="gcard glass" id="gcard">
+    <h2 class="script shine">Things I Never Said</h2>
+    <p class="nl" id="n0"></p><p class="nl" id="n1"></p><p class="nl" id="n2"></p><p class="nl" id="n3"></p>
+  </div>
+</div></section>
+
+<!-- 7 heart game -->
+<section class="page" id="p7"><div class="inner">
+  <h2 class="title script shine">Catch My Hearts</h2>
+  <p class="sub" id="cnt">0 / 4</p>
+  <div class="arena" id="arena"></div>
+  <div class="sec glass" id="sec"><p>You are one of those special people, Moti. Keep smiling, always. 🤍</p></div>
+</div></section>
+
+<!-- 8 bouquet -->
+<section class="page" id="p8"><div class="inner">
+  <h2 class="title script shine">For You</h2>
+  <svg id="bq" viewBox="0 0 300 372" aria-label="Bouquet of flowers"></svg>
+  <p class="line">A bouquet that never wilts, picked just for you, Moti 🌷</p>
+</div></section>
+
+<!-- 9 secret letter -->
+<section class="page" id="p9"><div class="inner stage">
+  <div style="text-align:center">
+    <div class="env" id="env"><div class="bk"></div><div class="fl"></div><div class="fr"></div><div class="seal">💗</div></div>
+    <p class="tap" id="etap">A secret letter 💌 Tap to open</p>
+  </div>
+  <div class="letter" id="letter">
+    <h3 class="script">Dear Moti,</h3>
+    <p style="--i:0">Pata nahi ye letter kahan se shuru karoon. Jo baat dil mein hai, use bolna mere liye aasaan nahi tha, isliye socha ki likh hi deta hoon.</p>
+    <p style="--i:1">Hum dost hain, aur main is dosti ki bahut izzat karta hoon. Par dheere-dheere tu mere din ka woh hissa ban gayi hai jiska main bina bole intezaar karta hoon. Phone uthata hoon toh ek chhoti si umeed rehti hai ki tera message aaya hoga.</p>
+    <p style="--i:2">Tujhse baat karna mujhe sach mein achha lagta hai. Time kab nikal jaata hai, pata hi nahi chalta.</p>
+    <p style="--i:3">Shuru mein maine ise bas ek achhi dosti samjha tha. Par ab lagta hai ki meri feelings dosti se thodi aage nikal chuki hain. Ye sab itne aaram se hua ki mujhe khud nahi pata kab.</p>
+    <p style="--i:4">Sach bolun toh thoda dar bhi lag raha hai, kyunki tu meri bahut achhi friend hai aur main ye dosti kho nahi sakta. Isliye ek baat saaf kar doon: tujh par koi pressure nahi hai. Tera jawab jo bhi ho, meri dosti tere liye waisi hi rahegi jaisi aaj hai.</p>
+    <p style="--i:5">Mujhe tujhse kuch maangna nahi tha. Bas chahta tha ki tujhe meri sachchai pata ho.</p>
+    <p style="--i:6">Aur agar kabhi tujhe bhi lage ki hum dosti se thoda aage badh sakte hain, toh main yahin hoon. Shayad kisi din hum dono ke beech dosti ke saath-saath kuch aur bhi ho. Bas yahi ek chhoti si umeed hai. 🤍</p>
+    <p class="sig" style="--i:7">Always yours,<br>Vikas ❤️</p>
+  </div>
+</div></section>
+
+<!-- 10 confession -->
+<section class="page" id="p10"><div class="inner">
+  <p class="script" id="fs"></p>
+  <div id="fq">
+    <svg id="hrt" viewBox="0 0 32 29" aria-hidden="true"><path d="M16 28C0 16-2 3 8 1c4-1 7 1 8 4 1-3 4-5 8-4 10 2 8 15-8 27Z"/></svg>
+    <h2 class="q">Moti, will you give us a chance to be something more than just friends? ❤️</h2>
+    <div class="ch"><button id="yes">Yes, I'd love to ❤️</button><button id="wait">I need some time 🥺</button></div>
+  </div>
+  <div class="res" id="ry"><h2 class="script">Thank you, Moti 🥹❤️</h2><p>You just made me the happiest person. I'll cherish this chance, and I'll take care of it, and of you, with all my heart.</p><p style="margin-top:.8rem">— Vikas ❤️</p></div>
+  <div class="res" id="rw"><h2 class="script">Take all the time you need 🤍</h2><p>There's no pressure at all, Moti. Your honesty matters more to me than any answer. Whatever you decide, your friendship is precious to me, and that won't change.</p><p style="margin-top:.8rem">— Vikas 🤍</p></div>
+</div></section>
+
+<div id="mk">Made by Aniket</div>
+<div id="wm">From Vikas, to Moti 💗</div>
+
+<nav id="nav" class="hide"><button id="prev" aria-label="Back">‹</button><div id="dots"></div><button id="next" aria-label="Next">›</button></nav>
+<canvas id="cf"></canvas>
+
+<script>
+/* =====================================================================
+   PASSWORD CONFIG: update this phrase in one place if needed.
+   Matching ignores letter case and leading/trailing spaces.
+   This is a cute access gate, not real security: a static website's
+   client-side password can be discovered by viewing its source.
+   ===================================================================== */
+const ACCESS_PASSWORD = "Your bestuu";
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+
+/* floating hearts and petals */
+const em=['💗','🩷','✨','🌸','❤️','💖','🌹'],fl=$('#fl');
+for(let i=0;i<10;i++){const e=document.createElement('span');e.className='f';e.textContent=em[i%em.length];
+e.style.cssText=`--x:${Math.random()*96}vw;--s:${14+Math.random()*22}px;--d:${9+Math.random()*10}s;--dl:${-Math.random()*18}s;--sw:${(Math.random()-.5)*120}px`;fl.appendChild(e)}
+
+/* name */
+$('#nm').innerHTML=[...'TANIYA'].map((c,i)=>`<span style="--d:${.4+i*.15}s">${c}</span>`).join('');
+
+/* sparkles */
+let sc=0;const SC=['#ff5f9b','#e0708f','#ffb347','#fff'];
+function spark(x,y,ch){if(sc>14)return;sc++;const s=document.createElement('span');s.className='sp';s.textContent=ch||'✦';s.style.cssText=`left:${x}px;top:${y}px;color:${SC[Math.random()*4|0]}`;s.onanimationend=()=>{s.remove();sc--};document.body.appendChild(s)}
+let lt=0;addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;const t=performance.now();if(t-lt<110)return;lt=t;spark(e.clientX,e.clientY)},{passive:true});
+
+/* confetti: one rAF loop, pre-rendered heart sprite, capped particles */
+const cv=$('#cf'),cx=cv.getContext('2d');let P=[],run=false,heart;
+(()=>{const h=document.createElement('canvas');h.width=h.height=40;const c=h.getContext('2d');c.fillStyle='#ff5f9b';c.beginPath();c.moveTo(20,36);c.bezierCurveTo(-6,18,6,0,20,12);c.bezierCurveTo(34,0,46,18,20,36);c.fill();heart=h})();
+function fit(){cv.width=innerWidth;cv.height=innerHeight}fit();let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(fit,150)});
+function confetti(n=140){n=Math.min(n,Math.max(0,180-P.length));const cols=['#ff5f9b','#ff9ec4','#e0708f','#ffd36e','#fff','#f4b99a'];
+for(let i=0;i<n;i++)P.push({x:innerWidth/2,y:innerHeight*.55,vx:(Math.random()-.5)*14,vy:-Math.random()*16-4,r:Math.random()*6+4,c:cols[i%cols.length],a:Math.random()*6,va:(Math.random()-.5)*.4,h:Math.random()<.3});
+if(!run&&P.length){run=true;requestAnimationFrame(tick)}}
+function tick(){cx.setTransform(1,0,0,1,0,0);cx.clearRect(0,0,cv.width,cv.height);let j=0;
+for(const p of P){p.vy+=.35;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.a+=p.va;if(p.y>cv.height+30)continue;P[j++]=p;
+ const co=Math.cos(p.a),si=Math.sin(p.a);cx.setTransform(co,si,-si,co,p.x,p.y);
+ if(p.h){const z=p.r*3;cx.drawImage(heart,-z/2,-z/2,z,z)}else{cx.fillStyle=p.c;cx.fillRect(-p.r/2,-p.r/2,p.r,p.r*1.6)}}
+P.length=j;if(j)requestAnimationFrame(tick);else{run=false;cx.setTransform(1,0,0,1,0,0);cx.clearRect(0,0,cv.width,cv.height)}}
+
+/* bouquet */
+(function(){
+const R=(x,y,r,a,b,i)=>{let s='';for(let k=0;k<5;k++){const f=1-k*.17;s+=`<ellipse cy="${-r*.1*k}" rx="${r*f}" ry="${r*f*.92}" transform="rotate(${k*37})" fill="${k%2?a:b}" stroke="rgba(120,20,70,.25)"/>`}
+return `<g transform="translate(${x} ${y})"><g class="bloom" style="--i:${i}">${s}<path d="M0 0q${r*.25} -${r*.2} 0 -${r*.35}" fill="none" stroke="rgba(120,20,70,.45)" stroke-width="1.6" stroke-linecap="round"/></g></g>`};
+const D=(x,y,r,i)=>{let s='';for(let a=0;a<360;a+=36)s+=`<ellipse cy="${-r*.55}" rx="${r*.24}" ry="${r*.5}" transform="rotate(${a})" fill="#fff" stroke="#f6c6da"/>`;
+return `<g transform="translate(${x} ${y})"><g class="bloom" style="--i:${i}">${s}<circle r="${r*.28}" fill="#ffd35c"/></g></g>`};
+const L=(x,y,i)=>{let s='';for(let j=0;j<7;j++)s+=`<ellipse cx="${x+(j%2?4:-4)}" cy="${y+j*9}" rx="5" ry="8" fill="${j%2?'#e0708f':'#ffb8c6'}"/>`;return `<g class="bloom" style="--i:${i}">${s}</g>`};
+const B=(x,y,i)=>`<g class="bloom" style="--i:${i}"><circle cx="${x}" cy="${y}" r="4" fill="#fff"/><circle cx="${x+5}" cy="${y+4}" r="3" fill="#fff"/><circle cx="${x-4}" cy="${y+5}" r="3.2" fill="#fff"/></g>`;
+const S=(x,y,i,c='#4f9d63')=>`<path class="stem" style="--i:${i}" d="M150 325Q${(150+x)/2} ${y+130} ${x} ${y}" stroke="${c}" stroke-width="3.5" fill="none" stroke-linecap="round"/>`;
+const rs=[[150,92,36,'#ff5f9b','#ff8fb8'],[88,152,30,'#ff8fb8','#ffb8cf'],[212,152,30,'#f2528f','#ff86b0']];
+const ds=[[56,104,20],[244,104,20],[38,214,22],[262,214,22]];
+const ls=[[118,26],[184,22],[30,166],[270,166]];
+const bs=[[40,60],[262,62],[72,186],[232,186],[150,30],[118,120],[184,118]];
+let st='',hd='',n=0;
+ls.forEach(f=>{st+=S(f[0],f[1]+50,n,'#6aa86f');hd+=L(f[0],f[1],n++)});
+ds.forEach(f=>{st+=S(f[0],f[1]+8,n);hd+=D(f[0],f[1],f[2],n++)});
+rs.forEach(f=>{st+=S(f[0],f[1]+f[2]*.4,n);hd+=R(f[0],f[1],f[2],f[3],f[4],n++)});
+bs.forEach(f=>{hd+=B(f[0],f[1],n++)});
+const lv=`<g class="bloom" style="--i:${n}"><ellipse cx="108" cy="252" rx="28" ry="9" transform="rotate(-28 108 252)" fill="#6cbf7f"/><ellipse cx="192" cy="252" rx="28" ry="9" transform="rotate(28 192 252)" fill="#6cbf7f"/><ellipse cx="84" cy="222" rx="24" ry="8" transform="rotate(-40 84 222)" fill="#7ccb8c"/><ellipse cx="216" cy="222" rx="24" ry="8" transform="rotate(40 216 222)" fill="#7ccb8c"/></g>`;
+const bow=`<g class="bow"><path d="M150 312C110 282 90 332 125 337C140 339 148 324 150 312Z" fill="#ff7fae"/><path d="M150 312C190 282 210 332 175 337C160 339 152 324 150 312Z" fill="#ff7fae"/><path d="M150 314L128 354L146 346L150 360Z" fill="#f2528f"/><path d="M150 314L172 354L154 346Z" fill="#f2528f"/><circle cx="150" cy="314" r="9" fill="#e8467f"/></g>`;
+$('#bq').innerHTML=`<g class="sway">${st}${lv}${hd}${bow}</g>`;
+$('#bq').addEventListener('pointerdown',e=>{for(let i=0;i<7;i++)spark(e.clientX+(Math.random()-.5)*60,e.clientY+(Math.random()-.5)*60,'💗')});
+})();
+
+/* gallery lightbox */
+$$('.pol').forEach(p=>p.onclick=()=>{const im=p.querySelector('img');if(im&&im.style.display!=='none'){$('#lbi').src=im.src;$('#lb').classList.add('on')}});
+$('#lb').onclick=()=>$('#lb').classList.remove('on');
+
+/* navigation */
+const pages=$$('.page:not(#p0)'),dots=$('#dots'),nav=$('#nav');let cur=0,tm=[];
+pages.forEach(()=>dots.appendChild(document.createElement('i')));
+const later=(f,t)=>tm.push(setTimeout(f,t));
+function update(){[...dots.children].forEach((d,i)=>d.classList.toggle('on',i===cur));nav.classList.toggle('hide',cur===0);
+$('#next').style.visibility=cur===pages.length-1?'hidden':'visible';$('#wm').classList.toggle('on',cur===pages.length-1)}
+const E={};function enter(n){const f=E[pages[n].id];f&&f()}
+function go(n){if(n<0||n>=pages.length||n===cur)return;if(pages[cur].id==='pv')reelStop();tm.forEach(clearTimeout);tm=[];clearTimeout(ty);$$('.typing').forEach(e=>e.classList.remove('typing'));
+ pages[cur].classList.remove('active');cur=n;pages[cur].classList.add('active');pages[cur].scrollTop=0;update();document.body.classList.toggle('night',pages[cur].id==='p10');enter(n)}
+$('#next').onclick=()=>go(cur+1);$('#prev').onclick=()=>go(cur-1);
+let sx=0,sy=0,sk=false;
+addEventListener('touchstart',e=>{const t=e.touches[0];sx=t.clientX;sy=t.clientY;sk=!!e.target.closest('button,.arena,#lb,.diary.opened,.reel')},{passive:true});
+addEventListener('touchend',e=>{if(cur===0||sk)return;const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.5)go(cur+(dx<0?1:-1))},{passive:true});
+update();
+
+/* music: starts when she taps Open */
+const bgm=$('#bgm');
+$('#openBtn').onclick=()=>{bgm.volume=0;
+ bgm.play().then(()=>{document.body.classList.add('music');let v=0;const t=setInterval(()=>{v=Math.min(1,v+.05);bgm.volume=v;if(v>=1)clearInterval(t)},120)}).catch(()=>{});
+ confetti(60);go(1)};
+$('#mute').onclick=()=>{bgm.muted=!bgm.muted;$('#mute').textContent=bgm.muted?'🔇':'🔊'};
+
+/* falling petals */
+let ty;function petals(n,once){const p=$('#fl');for(let i=0;i<n;i++){const e=document.createElement('span'),d=8+Math.random()*7,dl=once?Math.random()*3:-Math.random()*14;e.className='pt';
+e.style.cssText=`--x:${Math.random()*100}vw;--sz:${8+Math.random()*8}px;--d:${d}s;--dl:${dl}s;--sw:${(Math.random()-.5)*160}px`;
+if(once){e.style.animationIterationCount=1;setTimeout(()=>e.remove(),(d+dl)*1000+200)}p.appendChild(e)}}
+petals(9);
+
+/* typewriter */
+const seg=t=>window.Intl&&Intl.Segmenter?[...new Intl.Segmenter().segment(t)].map(x=>x.segment):[...t];
+function type(el,text,cb,sp=50){if(RM){el.textContent=text;cb&&cb();return}const a=seg(text),n=document.createTextNode('');el.textContent='';el.appendChild(n);el.classList.add('typing');let i=0;
+(function st(){if(i<a.length){const c=a[i++];n.data+=c;ty=setTimeout(st,c==='\n'?450:sp)}else{el.classList.remove('typing');cb&&cb()}})()}
+
+/* hidden feelings */
+const M6=["Moti,","","ना जाने क्यों तुझसे इतनी बातें करने का मन करता है,","तेरे एक मैसेज का भी इंतज़ार रहता है।","थोड़ी जलन तो होती है जब तू किसी और से बात करती है,","दिल में एक अजीब-सी बेचैनी होती है।"].join('\n');
+E.p5=()=>{$('#t6').textContent='';later(()=>type($('#t6'),M6,null,60),900)};
+
+/* things I never said (gift) */
+const NS=["I never said how much I wait for your messages.","I never said I feel a little jealous sometimes.","I never said how much your friendship means to me.","I never said that you've become someone really special. 🤍"];
+const chain=i=>{if(i<NS.length)type($('#n'+i),NS[i],()=>later(()=>chain(i+1),500),45)};
+E.p6=()=>{$('#gift').classList.remove('open','gone');$('#gcard').classList.remove('show');$('#tap').classList.remove('gone');NS.forEach((_,i)=>$('#n'+i).textContent='')};
+$('#gift').onclick=()=>{const g=$('#gift');if(g.classList.contains('open'))return;g.classList.add('open');$('#tap').classList.add('gone');confetti(40);
+ later(()=>g.classList.add('gone'),900);later(()=>$('#gcard').classList.add('show'),1300);later(()=>chain(0),2300)};
+
+/* heart game */
+let got=0;
+E.p7=()=>{const a=$('#arena');a.innerHTML='';a.style.display='';$('#sec').classList.remove('show');got=0;$('#cnt').textContent='0 / 4';
+ [[8,8],[62,4],[18,50],[64,54]].forEach((p,i)=>{const b=document.createElement('button');b.className='hh';b.textContent=['🩷','❤️','💗','💖'][i];b.setAttribute('aria-label','heart');
+  b.style.cssText=`--x:${p[0]}%;--y:${p[1]}%;--t:${3+i*.7}s;--dx:${(i%2?-1:1)*30}px;--dy:${24+i*6}px`;
+  b.onpointerdown=e=>{if(b.classList.contains('got'))return;b.classList.add('got');for(let k=0;k<5;k++)spark(e.clientX+(Math.random()-.5)*50,e.clientY+(Math.random()-.5)*50,'💗');got++;$('#cnt').textContent=got+' / 4';
+   if(got===4)later(()=>{a.style.display='none';$('#sec').classList.add('show');confetti(70)},700)};a.appendChild(b)})};
+
+/* secret letter */
+E.p9=()=>{$('#env').classList.remove('open','gone');$('#letter').classList.remove('show','pre');$('#etap').classList.remove('gone')};
+$('#env').onclick=()=>{const env=$('#env');if(env.classList.contains('open'))return;env.classList.add('open');$('#etap').classList.add('gone');
+ later(()=>env.classList.add('gone'),1100);
+ later(()=>{const L=$('#letter');L.classList.add('pre');requestAnimationFrame(()=>requestAnimationFrame(()=>L.classList.add('show')));$$('#letter p').forEach((p,i)=>later(()=>{const r=p.getBoundingClientRect();if(r.bottom>innerHeight-150)pages[cur].scrollBy({top:r.bottom-innerHeight+170,behavior:'smooth'})},i*1000+1300))},1300)};
+
+/* final confession */
+const FL=["Moti, there's one last thing...","It's something I've been wanting to ask you for a while.","Whatever you answer, I'll be okay with it.","I just want you to know where my heart is."];
+E.p10=()=>{const fs=$('#fs'),fq=$('#fq');fs.classList.remove('on');fs.textContent='';fq.classList.remove('on');fq.style.display='';$('#ry').classList.remove('show');$('#rw').classList.remove('show');
+ let t=1500;FL.forEach((x,i)=>{later(()=>{fs.textContent=x;fs.classList.add('on')},t);t+=3200;later(()=>fs.classList.remove('on'),t);t+=800});
+ later(()=>fq.classList.add('on'),t+300)};
+const answer=id=>{$('#fq').classList.remove('on');later(()=>{$('#fq').style.display='none';$(id).classList.add('show')},700)};
+$('#yes').onclick=()=>{answer('#ry');petals(24,true);confetti(110);later(()=>confetti(70),900);later(()=>confetti(70),1900)};
+$('#wait').onclick=()=>answer('#rw');
+
+/* diary */
+const DN=[
+{t:"Your Smile 🌸",b:"Moti, kabhi notice kiya hai? Jab tu smile karti hai, toh ek ordinary sa din bhi thoda achha lagne lagta hai. Tu kuch khaas karti bhi nahi, bas tera hona hi kaafi hai. Isliye please, apni smile kabhi mat khona. 🌸",r:-1.2,c:"#fffaf4",tp:"rgba(255,190,205,.8)",d:"🌸",p:"right:14px;bottom:10px"},
+{t:"Our Little Conversations 💬",b:"Humari chhoti-chhoti baatein mujhe sabse zyada pasand hain. Kabhi koi random masti, kabhi bina matlab ki baatein. Aur sach bolun toh, kabhi-kabhi main chupke se tere message ka wait bhi karta hoon. 💬",r:1,c:"#fff6f6",tp:"rgba(255,224,160,.8)",d:"💬",p:"left:44px;bottom:8px"},
+{t:"The Way You Make Me Smile 🥹",b:"Tujhe shayad pata bhi nahi hoga, par tu bina koshish kiye mujhe hasa deti hai. Mood chahe kaisa bhi ho, tujhse baat karte hi sab halka lagne lagta hai. Thank you for that, Moti. 🥹",r:-.6,c:"#fff4f8",tp:"rgba(240,190,225,.8)",d:"🌷",p:"right:16px;bottom:8px"},
+{t:"Little Things I Remember 💗",b:"Mujhe tujhse jude chhote-chhote pal yaad rehte hain. Jaise tera kisi baat par hans padna, ya hum dono ka ek-doosre ko tang karna. Ye saari chhoti cheezein mere liye kaafi special ban gayi hain. 💗",r:1.3,c:"#fffaf0",tp:"rgba(255,205,190,.85)",d:"💗",p:"left:44px;bottom:10px"},
+{t:"Something I Never Said 🤍",b:"Moti, ek baat hai jo main kaafi time se tujhse kehna chahta hoon. Yahan likhne baithta hoon toh shabd kam pad jaate hain. Chal, aage chalte hain... shayad wahan keh paaun. 🤍",r:-.8,c:"#fff7fb",tp:"rgba(255,255,255,.85)",d:"🤍",p:"right:14px;bottom:10px"}];
+let di=0,dbusy=false;const dm=$('#diary'),sT=$('#sTop'),sU=$('#sUnder');
+function fill(el,k,body){const n=DN[k],st=el.style;st.setProperty('--r',n.r+'deg');st.setProperty('--tint',n.c);st.setProperty('--tape',n.tp);
+ el.querySelector('h3').textContent=n.t;el.querySelector('.hw').textContent=body===false?'':n.b;const d=el.querySelector('.deco');d.textContent=n.d;d.style.cssText=n.p}
+function dui(){const last=di===DN.length-1;$('#dCount').textContent=(di+1)+' of '+DN.length;$('#dPrev').disabled=di===0;$('#dNext').style.display=last?'none':'';$('#dCont').style.display=last?'inline-flex':'none'}
+function say(){type(sT.querySelector('.hw'),DN[di].b,null,28)}
+function turn(dir){const k=di+dir;if(dbusy||k<0||k>=DN.length)return;dbusy=true;clearTimeout(ty);sT.querySelector('.hw').classList.remove('typing');
+ if(dir>0){fill(sU,k,false);sT.classList.add('flip');
+  later(()=>{di=k;sT.style.transition='none';sT.classList.remove('flip');fill(sT,k,false);void sT.offsetWidth;sT.style.transition='';dui();say();dbusy=false},720)}
+ else{fill(sU,di);fill(sT,k);sT.style.transition='none';sT.classList.add('flip');void sT.offsetWidth;sT.style.transition='';sT.classList.remove('flip');
+  later(()=>{di=k;dui();dbusy=false},720)}}
+E.p2=()=>{dm.classList.add('rst');dm.classList.remove('opened');di=0;dbusy=false;fill(sT,0,false);fill(sU,1,false);sT.classList.remove('flip');dui();
+ requestAnimationFrame(()=>requestAnimationFrame(()=>dm.classList.remove('rst')))};
+$('#dOpen').onclick=()=>{if(dm.classList.contains('opened'))return;dm.classList.add('opened');later(say,1300)};
+$('#dPrev').onclick=()=>turn(-1);$('#dNext').onclick=()=>turn(1);$('#dCont').onclick=()=>go(cur+1);
+let bx=0;const bk=$('#book');bk.addEventListener('touchstart',e=>{bx=e.touches[0].clientX},{passive:true});
+bk.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-bx;if(Math.abs(d)>50)turn(d<0?1:-1)},{passive:true});
+fill(sT,0,false);fill(sU,1,false);dui();
+
+/* password gate */
+const ACCESS_KEY=ACCESS_PASSWORD.trim().toLowerCase(),gate=$('#gate'),gin=$('#gin'),gmsg=$('#gmsg');let unlocked=false;
+function unlock(){if(unlocked)return;unlocked=true;gin.blur();gin.disabled=true;$('#gbtn').disabled=true;gate.classList.add('ok');$('#glock').textContent='🔓';
+ gmsg.textContent='You found the little secret! 💗';gmsg.className='gmsg good';
+ const r=gate.getBoundingClientRect();for(let i=0;i<8;i++)spark(r.left+Math.random()*r.width,r.top+Math.random()*r.height,i%2?'💗':'✦');
+ confetti(60);petals(12,true);
+ setTimeout(()=>{$('#p0').classList.remove('active');pages[0].classList.add('active');update();setTimeout(()=>$('#p0').remove(),1300)},2000)}
+$('#gform').onsubmit=e=>{e.preventDefault();if(unlocked)return;if(gin.value.trim().toLowerCase()===ACCESS_KEY)return unlock();
+ gmsg.textContent="Oops! That's not the right answer, try again. 🥺";gmsg.className='gmsg';gate.classList.remove('shake');void gate.offsetWidth;gate.classList.add('shake');gin.select()};
+gate.onanimationend=e=>{if(e.animationName==='shake')gate.classList.remove('shake')};
+
+/* reel video */
+const vid=$('#rvid'),reel=$('#reel'),rplay=$('#rplay');let bgmWas=false;
+const rsync=()=>{$('#rpp').textContent=vid.paused?'▶':'❚❚';$('#rvol').textContent=vid.muted||vid.volume===0?'🔇':'🔊'};
+function reelStop(){if(!vid.paused)vid.pause()}
+function reelPlay(){const p=vid.play();p&&p.catch&&p.catch(()=>{})}
+const reelToggle=()=>vid.paused?reelPlay():vid.pause();
+vid.addEventListener('play',()=>{reel.classList.add('started');rplay.classList.add('gone');$('#rend').classList.remove('on');if(!bgm.paused){bgmWas=true;bgm.pause()}rsync()});
+vid.addEventListener('pause',()=>{rsync();if(bgmWas){bgmWas=false;bgm.play().catch(()=>{})}});
+vid.addEventListener('ended',()=>{rplay.textContent='↻';rplay.setAttribute('aria-label','Play again');rplay.classList.remove('gone');$('#rend').classList.add('on');rsync()});
+vid.addEventListener('error',()=>{rplay.classList.add('gone');reel.classList.remove('started');$('#rmiss').hidden=false});
+vid.addEventListener('click',reelToggle);
+rplay.onclick=()=>{if(vid.ended)vid.currentTime=0;rplay.textContent='▶';rplay.setAttribute('aria-label','Play video');reelPlay()};
+$('#rpp').onclick=reelToggle;
+$('#rvol').onclick=()=>{vid.muted=!vid.muted;if(!vid.muted&&vid.volume===0)vid.volume=.7;$('#rrng').value=vid.muted?0:vid.volume;rsync()};
+$('#rrng').oninput=e=>{const v=+e.target.value;vid.volume=v;vid.muted=v===0;rsync()};
+$('#rfs').onclick=()=>{const d=document;if(d.fullscreenElement||d.webkitFullscreenElement){(d.exitFullscreen||d.webkitExitFullscreen).call(d)}
+ else if(reel.requestFullscreen)reel.requestFullscreen().catch(()=>{});else if(reel.webkitRequestFullscreen)reel.webkitRequestFullscreen();else if(vid.webkitEnterFullscreen)vid.webkitEnterFullscreen()};
+E.pv=()=>{$('#rend').classList.remove('on');if(vid.ended){vid.currentTime=0;rplay.textContent='▶';rplay.classList.remove('gone')}rsync()};
+</script>
+</body>
+</html>
